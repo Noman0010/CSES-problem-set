@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int countDivisors(int x) {
+    int divisors = 0;
+    for (int i = 1; i <= sqrt(x); ++i) {
+        if (x % i == 0) {
+            divisors += (i == x / i) ? 1 : 2;
+        }
+    }
+    return divisors;
+}
+
+int main() {
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        cout << countDivisors(n) << endl;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
